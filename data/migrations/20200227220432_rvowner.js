@@ -14,14 +14,8 @@ exports.up = function (knex) {
             .string('password', 255)
             .notNullable();
         rvowner
-            .string('address', 255)
+            .string('contact', 255)
             .notNullable()
-        rvowner
-            .string('reservations', 255)
-
-        rvowner
-            .string('favlocations', 255)
-
         rvowner
             .boolean('islandowner')
             .defaultTo(false)

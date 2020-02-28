@@ -14,12 +14,9 @@ exports.up = function (knex) {
       .string('password', 255)
       .notNullable();
     landowner
-      .string('address', 255)
+      .string('contact', 255)
       .notNullable()
-    landowner
-      .string('listings', 255)
-      .notNullable()
-      .unique();
+ 
 
   })
 
