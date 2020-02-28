@@ -1,4 +1,4 @@
-module.exports={landowners,landowner_listings,rvownerfav_listings,rvowners,reservations,listings}
+
 const landowners =
     [{
         "landownerid": 1,
@@ -866,3 +866,6 @@ const landowner_listings = [{
     "listingid": 17,
     "landowner_listingsid": "12,17"
 }]
+
+
+module.exports = { landowners, landowner_listings, rvownerfav_listings, rvowners, reservations, listings }
