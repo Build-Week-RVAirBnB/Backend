@@ -1,3 +1,4 @@
 module.exports = {
-    jwtSecret: process.env.JWT_SECRET || 'Dan Marinos plays for the Miami Dolphinos?'
+  jwtSecret: process.env.JWT_SECRET || 'is it secret, is it safe?'
+
 }
