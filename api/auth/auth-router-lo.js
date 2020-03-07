@@ -1,16 +1,16 @@
 const router = require('express').Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const { jwtSecret } = require('../config/secrets.js.js')
+const { jwtSecret } = require('../config/secrets.js')
 
-const unique = require('../middleware/uniqueuserMiddleware.js.js')
-const checkfor = require('../middleware/checkfor.js.js')
+const unique = require('../middleware/uniqueuserMiddleware.js')
+const checkfor = require('../middleware/checkfor.js')
 
-const { add, findBy } = require('../landOwner/landOwner-model.js.js')
+const { add, findBy } = require('../landOwner/landOwner-model.js')
 
 //  CREATE
 
-router.post('/register/',checkfor('username'),checkfor('password'), unique('landowner'), (req, res) => {
+router.post('/register/', checkfor('username'), checkfor('password'), unique('landowner'), (req, res) => {
   const landowner = req.body
   // console.log(req)
   const hash = bcrypt.hashSync(landowner.password, 7)
@@ -19,17 +19,17 @@ router.post('/register/',checkfor('username'),checkfor('password'), unique('land
   add(landowner)
     .then(saved => {
       const token = genToken(saved)
-      res.status(201).json({saved,token})
+      res.status(201).json({ saved, token })
     })
     .catch(error => {
       res.status(500).json({ message: 'There was an error while trying to add the user to the database.', error: `|| ---${error}--- ||  ##${console.error(error)}##` })
     })
 })
 
-router.post('/login/',checkfor('username'),checkfor('password'), (req, res) => {
+router.post('/login/', checkfor('username'), checkfor('password'), (req, res) => {
   const { username, password } = req.body
 
-  findBy('landowner',{ username })
+  findBy('landowner', { username })
     .first()
     .then(landowner => {
       if (landowner && bcrypt.compareSync(password, landowner.password)) {
@@ -37,7 +37,8 @@ router.post('/login/',checkfor('username'),checkfor('password'), (req, res) => {
         res.status(200).json({
           message: `Welcome landowner ${landowner.username}!`,
           token: token,
-          username: username
+          username: username,
+          id: landowner.id
         })
       } else {
         res.status(401).json({ message: 'Invalid Credentials' })

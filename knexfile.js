@@ -15,7 +15,7 @@ module.exports = {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
-      filename: './data/blog.db3'
+      filename: './data/test.db3'
     },
     pool: {
       afterCreate: (conn, done) => {
@@ -33,7 +33,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-connection: 'postgres://oadqlvdmnbpdog:5116100a268b89bef4b565ad5f1a16f76ce0c03e3158d57f62940c67485304e4@ec2-52-200-119-0.compute-1.amazonaws.com:5432/d2gp89rcrlb6nl?ssl=true?rejectUnauthorized=true',
+    connection: 'postgres://oadqlvdmnbpdog:5116100a268b89bef4b565ad5f1a16f76ce0c03e3158d57f62940c67485304e4@ec2-52-200-119-0.compute-1.amazonaws.com:5432/d2gp89rcrlb6nl?ssl=true?rejectUnauthorized=true',
     // connection: {
     //   dbname: 'd2gp89rcrlb6nl',
     //   host: 'ec2-52-200-119-0.compute-1.amazonaws.com',
@@ -43,7 +43,7 @@ connection: 'postgres://oadqlvdmnbpdog:5116100a268b89bef4b565ad5f1a16f76ce0c03e3
     //   sslmode: require,
     //   rejectUnauthorized: false,
     //   ssl: true
-   
+
     // },
     pool: { min: 2, max: 10 },
     migrations: {
@@ -56,45 +56,44 @@ connection: 'postgres://oadqlvdmnbpdog:5116100a268b89bef4b565ad5f1a16f76ce0c03e3
   }
 
 }
-  // development: {
-  //   client: 'pg',
-  //   connection: process.env.DB_URL,
-  //   pool: { min: 2, max: 10 },
-  //   migrations: {
-  //     directory: './data/migrations'
-  //   },
-  //   seeds: {
-  //     directory: './db/seeds/dev'
-  //   },
-  //   useNullAsDefault: true
-  // },
-  // development: {
-  //   client: 'pg',
-  //   connection: 'postgres://localhost/rventure',
-  //   password: 'postgres',
-  //   pool: { min: 2, max: 10 },
-  //   migrations: {
-  //     directory: './data/migrations'
-  //   },
-  //   seeds: {
-  //     directory: './db/seeds/dev'
-  //   },
-  //   useNullAsDefault: true
-  // },
+// development: {
+//   client: 'pg',
+//   connection: process.env.DB_URL,
+//   pool: { min: 2, max: 10 },
+//   migrations: {
+//     directory: './data/migrations'
+//   },
+//   seeds: {
+//     directory: './db/seeds/dev'
+//   },
+//   useNullAsDefault: true
+// },
+// development: {
+//   client: 'pg',
+//   connection: 'postgres://localhost/rventure',
+//   password: 'postgres',
+//   pool: { min: 2, max: 10 },
+//   migrations: {
+//     directory: './data/migrations'
+//   },
+//   seeds: {
+//     directory: './db/seeds/dev'
+//   },
+//   useNullAsDefault: true
+// },
 
-  // development: {
-  //   client: 'pg',
-  //   connection: 'postgres://localhost/',
-  //   filename: './data/developmentpg.db3',
-  //   pool: { min: 2, max: 10 },
-  //   migrations: {
-  //     directory: './data/migrations'
-  //   },
-  //   seeds: {
-  //     directory: './data/seeds'
-  //   }
-  // },
-
+// development: {
+//   client: 'pg',
+//   connection: 'postgres://localhost/',
+//   filename: './data/developmentpg.db3',
+//   pool: { min: 2, max: 10 },
+//   migrations: {
+//     directory: './data/migrations'
+//   },
+//   seeds: {
+//     directory: './data/seeds'
+//   }
+// },
 
 // development: {
 //   client: 'sqlite3',

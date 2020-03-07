@@ -1,12 +1,12 @@
 const router = require('express').Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const { jwtSecret } = require('../config/secrets.js.js')
+const { jwtSecret } = require('../config/secrets.js')
 
-const unique = require('../middleware/uniqueuserMiddleware.js.js')
-const checkfor=require('../middleware/checkfor.js.js')
+const unique = require('../middleware/uniqueuserMiddleware.js')
+const checkfor=require('../middleware/checkfor.js')
 
-const { add, findBy } = require('../rv/rv-model.js.js')
+const { add, findBy } = require('../rv/rv-model.js')
 
 // CREATE
 

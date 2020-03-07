@@ -1,12 +1,15 @@
 {
   "name": "rvairbnb",
   "version": "1.0.0",
-  "description": "",
+  "description": "||| rVenture-[rvAirbnb_5thWheel] |||cross-functional BUILD sprint 30 hours ||Node-Expressjs React-DOM postgreSQL Less jestDom react/testing-library||",
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    // "test": "cross-env DB_ENV=testing jest --watch",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose",
     "start": "node index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -37,8 +40,5 @@
     "cross-env": "^7.0.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
-  },
-  // "jest": {
-  //   "testEnvironment": "node"
-  // }
+  }
 }

@@ -10,7 +10,7 @@
 
 //      and reserve a spot for their RV for a desired date(s) (web, mobile)
 const router = require('express').Router();
-const listing = require('../jsondata/mock.js.js').listings
+const listing = require('../jsondata/mock.js').listings
 
 router.get('/', (req, res) => {
   res.status(200).json({ listings: listing })

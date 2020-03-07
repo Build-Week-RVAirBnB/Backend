@@ -1,5 +1,5 @@
 // const landOwner= require('../../api/landOwner/landOwner-model.js')
-const {findBy}= require('../rv/rv-model.js')
+const {findBy}= require('../../api/rv/rv-model.js')
 
 module.exports =prop=> (req, res, next) => {
   const { username, email } = req.body
