@@ -49,20 +49,20 @@ router.get('/:id', async (req, res) => {
 
 // hardcode add new listing by req.body
 router.post('/', async (req, res) => {
-  const newlisting = list
-    .add(req.body)
+  list
+    .add(req.body, 'listing')
     .then(listingUp => {
       res.status(201).json({ 'newlisting added': listingUp })
     })
     .catch(error => {
-      res.status(500).json({ error: 'thatdidnt work my friend' })
+      res.status(500).json({ error: `that didnt work my friend||${console.error(error)}||--${error}--||` })
       console.error(error)
     })
 })
 
 router.put('/:id', (req, res) => {
   list
-    .update(req.params.id, req.body)
+    .update(req.params.id, req.body, 'listing')
     .then(updatedListing => {
       updatedListing.length == 0 || undefined
         ? res.status(404).json({ message: 'the listing could not be found' })
@@ -80,7 +80,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   list
-    .remove(req.params.id)
+    .remove('listing', req.params.id)
     .then(count => {
       if (count > 0) {
         res.status(200).json({ message: 'The listing has been nuked' })
