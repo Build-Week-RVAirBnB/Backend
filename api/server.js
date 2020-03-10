@@ -1,5 +1,6 @@
 const express = require('express')
 const configMiddleware = require('./configMiddleware')
+const authenticate = require('../api/middleware/authMiddleware')
 const server = express()
 server.use(express.json())
 configMiddleware(server)
@@ -12,14 +13,14 @@ const listingRouter = require('../api/listing/listing-router.js')
 const reserveRouter = require('../api/reservation/reservation-router.js')
 server.use(express.json())
 server.use('/api/rv', rvRouter)
-server.use('/api/reserve', reserveRouter)
+server.use('/api/reserve', authenticate, reserveRouter)
 server.use('/api/listing', listingRouter)
 
 server.use('/auth/landowner', landownerAuth)
 server.use('/auth/rv', rvAuth)
 
 server.get('/api', (req, res) => {
-  res.json({page:`  
+  res.json(`  
 
 <meta property='og:description' content='NAME|RV camping Airbnb PITCH| 5th wheel Airbnb is a company that connects land owners and 5th wheel / RV owners. 🤝🏼'>
 <meta property='og:image' content='https://imgur.com/hpzN3f8'>
@@ -63,11 +64,11 @@ By using 5th wheel Airbnb,
   - 💑  RV owners get access to use these previously unknown/unavailable sites, 🏞🚌
   - 💰 and Landowners get to cash-in on otherwise dormant or underutilized land</code></main></og:description>
 <link rel="image_src" href='https://imgur.com/hpzN3f8'>
-`})
+`)
 })
 
 server.get('/auth', (req, res) => {
-  res.send({page:`   
+  res.send(`   
 <h1>rVenture</h1>
 
 <h2>https://rventure.herokuapp.com/  ✔ api status</h2>
@@ -79,7 +80,7 @@ server.get('/auth', (req, res) => {
 <h4><code> POST--|https://rventure.herokuapp.com/auth/rv/login</code></h4>
 <h4><code> POST--|https://rventure.herokuapp.com/auth/landowner/register</code></h4
 <h4><code> POST--|https://rventure.herokuapp.com/auth/landowner/login</code></h4>
-<hr> 🚙`})
+<hr> 🚙`)
 })
 
 server.get('/', (req, res) => {
