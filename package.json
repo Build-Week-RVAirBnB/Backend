@@ -34,7 +34,8 @@
     "morgan": "^1.9.1",
     "pg": "^7.18.2",
     "server": "^1.0.27",
-    "sqlite3": "^4.1.1"
+    "sqlite3": "^4.1.1",
+    "x-ray":"^2.3.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.0",
