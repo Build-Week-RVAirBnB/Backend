@@ -23,7 +23,7 @@ server.use('/auth/rv', rvAuth)
 server.get('/api', (req, res) => {
 
   res.json(`  
-<html>
+
 
 <og:title><h1>rVenture</h1></og:title>
 
@@ -64,7 +64,7 @@ By using 5th wheel Airbnb,
   - 💑  RV owners get access to use these previously unknown/unavailable sites, 🏞🚌
   - 💰 and Landowners get to cash-in on otherwise dormant or underutilized land</code></main></og:description>
 <link rel="image_src" href='https://imgur.com/hpzN3f8'>
-</html>
+
 `)
 })
 
