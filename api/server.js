@@ -21,12 +21,12 @@ server.use('/auth/rv', rvAuth)
 
 server.get('/api', (req, res) => {
   res.json(`  
-
+<html><head>
 <meta property='og:description' content='NAME|RV camping Airbnb PITCH| 5th wheel Airbnb is a company that connects land owners and 5th wheel / RV owners. 🤝🏼'>
 <meta property='og:image' content='https://imgur.com/hpzN3f8'>
 <meta property='og:url' content='https://rventure.herokuapp.com/api'>
 <og:title><h1>rVenture</h1></og:title>
-
+</head>
 <h2>https://rventure.herokuapp.com/  ✔ api status</h2>
 
 <hr>
@@ -64,6 +64,7 @@ By using 5th wheel Airbnb,
   - 💑  RV owners get access to use these previously unknown/unavailable sites, 🏞🚌
   - 💰 and Landowners get to cash-in on otherwise dormant or underutilized land</code></main></og:description>
 <link rel="image_src" href='https://imgur.com/hpzN3f8'>
+</html>
 `)
 })
 
