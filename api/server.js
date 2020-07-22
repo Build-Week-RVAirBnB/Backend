@@ -22,7 +22,7 @@ server.use('/auth/rv', rvAuth)
 
 server.get('/api', (req, res) => {
 
-  res.json(`  
+  res.send(`  
 <html>
 <head>
  <meta name="twitter:card" content="5th wheel Airbnb is a company that connects land owners and 5th wheel / RV owners. 
