@@ -28,7 +28,7 @@ list.find()
     })
 })
 
-//hardcode listing by req.params.id
+
 // this can return listings by owner or listing id
 router.get('/:id/listings', async (req, res) => {
 list.findBy('listing',req.params.id)
