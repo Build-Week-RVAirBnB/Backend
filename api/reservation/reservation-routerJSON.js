@@ -13,8 +13,7 @@ const router = require('express').Router();
 
 
 
-
-
+/// this mock api was used to temporarily deliver data for the frontend team during the early stages of backend development and replaced with a working dynamic express postgress backend
 // //MVP
 // 1. Users can register/create an account as either an **RV Owner** or a **Landowner** (web, mobile)
 // 2. **Landowners** and **RV Owners** can login to the the app. (web, mobile)
