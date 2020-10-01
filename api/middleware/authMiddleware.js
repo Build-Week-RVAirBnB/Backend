@@ -16,6 +16,6 @@ module.exports = (req, res, next) => {
       }
     })
   } else {
-    res.status(403).json({ Forbidden: 'Access Forbidden: You shall not pass!' })
+    res.status(403).json({ Forbidden: `Access Forbidden: You shall not pass! You must be logged in to access data at this endpoint => ${req.originalUrl}` })
   }
 }
