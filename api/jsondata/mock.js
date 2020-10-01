@@ -1,4 +1,8 @@
+{/* this is a mock data set used during the first 2 days of the build sprint. I created this in conjunction with the routes discussed and decided upon with the frontend team to offer an exact replication of the experience a frontend developer would have while developing with the finished api after i rought a database live
+this dataset was accessible from the models and the endpoints and had full crud functionality for both user types using standard imutable array methods
+the only downside being that it is publically stored and accessible in raw format throught this public repo. the database adds a layer of security with hashed passwords and authO/authN requirements to acccess the real data.
 
+*/}
 const landowners =
 [{
   id: 1,
