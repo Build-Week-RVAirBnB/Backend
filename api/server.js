@@ -41,15 +41,15 @@ By using 5th wheel Airbnb,
 </head>
 <og:title><h1>rVenture</h1></og:title>
 
-<h2>https://rventure.herokuapp.com/  ✔ api status</h2>
+<h2>https://rventuren.herokuapp.com/  ✔ api status</h2>
 
 <hr>
 
 <h3>https://rventure.herokuapp.com/api/ endpoint documentation📃</h3>
 
 <br>
-<h4><code> POST--|https://rventure.herokuapp.com/auth/rv/register</code>🚎</h4>
-<h4><code> POST--|https://rventure.herokuapp.com/auth/rv/login</code></h4>
+<h4><code> POST--|https://rventuren.herokuapp.com/auth/rv/register</code>🚎</h4>
+<h4><code> POST--|https://rventuren.herokuapp.com/auth/rv/login</code></h4>
 <h4><code> POST--|https://rventure.herokuapp.com/auth/landowner/register</code></h4
 <h4><code> POST--|https://rventure.herokuapp.com/auth/landowner/login</code></h4>
 <hr>
