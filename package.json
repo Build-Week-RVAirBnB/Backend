@@ -41,6 +41,6 @@
     "supertest": "^4.0.2"
   },
   "engines":{
-    "node":"^latest"
+    "node":"^15.0.0"
   }
 }
